@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors. The intention is to style elements with the class "my-class" within a div with the id "my-div", but the styling is not applied as expected.
+
+```css
+#my-div {
+  background-color: lightblue;
+}
+
+#my-div .my-class {
+  background-color: lightcoral;
+}
+
+.my-class {
+  background-color: lightgreen; /* This rule unintentionally overrides the more specific rule */
+}
+```
+
+The unexpected behavior arises because the last rule `.my-class` has higher specificity due to its simplicity, thus overriding the more specific `#my-div .my-class`.
