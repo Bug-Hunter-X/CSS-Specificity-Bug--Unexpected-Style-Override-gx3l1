@@ -1,0 +1,20 @@
+The solution is to adjust the CSS to correctly prioritize the intended style.  We can achieve this by increasing the specificity of the intended rule or by removing the conflicting less specific rule.
+
+Here's the corrected CSS:
+
+```css
+#my-div {
+  background-color: lightblue;
+}
+
+#my-div .my-class {
+  background-color: lightcoral;
+}
+/* The less specific rule is removed */
+/* Removing this line solves the issue. */
+/*.my-class {
+  background-color: lightgreen; 
+}*/
+```
+
+By removing the less specific rule `.my-class`, we allow the more specific rule `#my-div .my-class` to apply the correct styling.
